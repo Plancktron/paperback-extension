@@ -735,11 +735,11 @@ var _Sources = (() => {
     }
   });
 
-  // src/MangaHere/MangaHere.ts
-  var MangaHere_exports = {};
-  __export(MangaHere_exports, {
-    MangaHere: () => MangaHere,
-    MangaHereInfo: () => MangaHereInfo
+  // src/WeebCentral/WeebCentral.ts
+  var WeebCentral_exports = {};
+  __export(WeebCentral_exports, {
+    WeebCentral: () => WeebCentral,
+    WeebCentralInfo: () => WeebCentralInfo
   });
   var import_types3 = __toESM(require_lib());
 
@@ -14452,7 +14452,7 @@ var _Sources = (() => {
   var parse5 = getParse((content, options, isDocument2, context) => options._useHtmlParser2 ? parseDocument(content, options) : parseWithParse5(content, options, isDocument2, context));
   var load = getLoad(parse5, (dom, options) => options._useHtmlParser2 ? esm_default(dom, options) : renderWithParse5(dom));
 
-  // src/MangaHere/MangaHereParser.ts
+  // src/WeebCentral/WeebCentralParser.ts
   var import_types2 = __toESM(require_lib());
   var parseMangaDetails = ($3, mangaId2) => {
     const section = $3(".detail-info");
@@ -14774,7 +14774,7 @@ var _Sources = (() => {
     return isLast;
   };
 
-  // src/MangaHere/MangaHereHelper.ts
+  // src/WeebCentral/WeebCentralHelper.ts
   var URLBuilder = class {
     constructor(baseUrl) {
       this.parameters = {};
@@ -14807,21 +14807,21 @@ var _Sources = (() => {
     }
   };
 
-  // src/MangaHere/MangaHere.ts
-  var MH_DOMAIN = "https://www.mangahere.cc";
-  var MangaHereInfo = {
+  // src/WeebCentral/WeebCentral.ts
+  var MH_DOMAIN = "https://www.weebcentral.com";
+  var WeebCentralInfo = {
     version: "3.0.5",
-    name: "MangaHere",
+    name: "WeebCentral",
     icon: "icon.png",
     author: "Netsky",
     authorWebsite: "https://github.com/TheNetsky",
-    description: "Extension that pulls manga from mangahere.cc",
+    description: "Extension that pulls manga from weebcentral.com",
     contentRating: import_types3.ContentRating.MATURE,
     websiteBaseURL: MH_DOMAIN,
     sourceTags: [],
     intents: import_types3.SourceIntents.MANGA_CHAPTERS | import_types3.SourceIntents.HOMEPAGE_SECTIONS | import_types3.SourceIntents.CLOUDFLARE_BYPASS_REQUIRED
   };
-  var MangaHere = class {
+  var WeebCentral = class {
     constructor() {
       this.requestManager = App.createRequestManager({
         requestsPerSecond: 10,
@@ -14835,7 +14835,7 @@ var _Sources = (() => {
                 "user-agent": await this.requestManager.getDefaultUserAgent()
               }
             }, request.cookies = [
-              App.createCookie({ name: "isAdult", value: "1", domain: "www.mangahere.cc" })
+              App.createCookie({ name: "isAdult", value: "1", domain: "www.weebcentral.com" })
             ];
             return request;
           },
@@ -14939,6 +14939,6 @@ var _Sources = (() => {
       return parseTags($3);
     }
   };
-  return __toCommonJS(MangaHere_exports);
+  return __toCommonJS(WeebCentral_exports);
 })();
 this.Sources = _Sources; if (typeof exports === 'object' && typeof module !== 'undefined') {module.exports.Sources = this.Sources;}
