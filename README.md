@@ -1,7 +1,6 @@
-# Netsky's Repo Index
-[Github Repo](https://github.com/TheNetsky/netskys-extensions)
+# Netsky's Repo Index (Modified by Plancktron)
+[Github Repo](https://github.com/Plancktron/paperback-extension)
 <br>
-Join the [Discord](https://discord.gg/rmf6jQpMU9) for support and more sources!
 
 ## Current Repo
 
